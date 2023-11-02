@@ -1,0 +1,18 @@
+:root{
+  --bckg-page: #002220;
+  --bckg-fonts: #FFF;
+  --font-default: 'Inter Tight', sans-serif;
+  --font-size-default: 2.5rem;
+}
+
+@media screen and (width <= 766px) {
+  :root{
+    --font-size-default: 1.75rem;
+  }
+}
+
+@media screen and (width <= 466px) {
+  :root{
+    --font-size-default: 1.25rem;
+  }
+}

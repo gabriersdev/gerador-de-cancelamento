@@ -1,0 +1,78 @@
+.footer{
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-image: linear-gradient(90deg, var(--branco-50) 0%, var(--branco-10) 100%) 1;
+}
+
+.footer :is(span, p, b, li){
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.footer small, li{
+  font-size: 1rem !important;
+  font-weight: 300;
+}
+
+.footer [data-link]:is(:hover, :focus){
+  text-decoration: underline !important;
+}
+
+.footer footer{
+  padding-top: 4rem;
+  padding-block-start: 4rem;
+  padding-block-end: 2rem;
+  padding-bottom: 2rem;
+}
+
+.footer.container{
+  padding: 0;
+}
+
+.footer h5.bold{
+  font-size: 1.5rem !important;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.footer h5{
+  font-family: 'Inter Tight', 'Inter', sans-serif !important;
+}
+
+.footer .col-6 h5{
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem !important;
+  font-size: 1.5rem !important;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 767px) {
+  .footer .col-12{
+    margin-bottom: 1rem;
+  }
+
+  .footer .col-6{
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (width <= 575px) {
+  .footer{
+    margin: 0 1rem;
+    width: calc(100% - 2rem);
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .footer .row{
+    display: block;
+  }
+
+  .footer .col-6.col-md{
+    width: 100%;
+  }
+
+  .footer .col-6 h5{
+    margin-top: 0.75rem;
+  }
+}
