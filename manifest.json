@@ -18,6 +18,11 @@
       "src": "./img/copyright.svg",
       "size": "16x16",
       "type": "svg"
+    },
+    {
+      "src": "./img/bannger.png",
+      "size": "600x400",
+      "type": "png"
     }
   ]
 }
