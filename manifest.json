@@ -1,17 +1,22 @@
 {
-  "name": "Nome da aplicação",
-  "description": "Descrição sucinta da aplicação",
-  "short_name": "Nome da aplicação ou 'nome curto' se houver",
-  "background": "#F6F6F6",
+  "name": "Gerador de Cancelamento",
+  "description": "O Gerador de Cancelamento informa aleatoriamente o motivo que uma pessoa será cancelada.",
+  "short_name": "Gerador de Cancelamento",
+  "background": "#002220",
   "icons": [
     {
-      "src": "... PNG",
-      "size": "16x16",
+      "src": "./img/icon-enter.png",
+      "size": "32x32",
       "type": "png"
     },
     {
-      "src": "... SVG",
-      "size": "16x20",
+      "src": "./img/favicon.png",
+      "size": "1024x1024",
+      "type": "png"
+    },
+    {
+      "src": "./img/copyright.svg",
+      "size": "16x16",
       "type": "svg"
     }
   ]
