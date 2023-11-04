@@ -1,9 +1,9 @@
 "use strict";
 
-import { capitalize, criarTooltips, isEmpty, popovers, primeiroNome, tooltips } from "./modulos/utilitarios.js";
+import { capitalize, criarTooltips, desanitizarStringURL, isEmpty, popovers, primeiroNome, sanitizarString, tooltips } from "./modulos/utilitarios.js";
 
 (() => {
-  // hljs.highlightAll();
+  const url = new URLSearchParams(new URL(window.location).search);
   
   document.querySelectorAll('[data-recarrega-pagina]').forEach(botao => {
     botao.addEventListener('click', () => {
@@ -168,10 +168,12 @@ import { capitalize, criarTooltips, isEmpty, popovers, primeiroNome, tooltips } 
           setTimeout(() => message.innerHTML = '&nbsp;', 500);
           
           setTimeout(() => {
+            const urlMotivo = desanitizarStringURL(url.get('motivo'));
+
             // Sortear um índice do array de motivosParaSerCancelado
-            const motivoSorteado = Math.floor(Math.random() * motivosParaSerCancelado.length);
+            const motivoSorteado = isEmpty(urlMotivo)? Math.floor(Math.random() * motivosParaSerCancelado.length) :urlMotivo;
             
-            `${capitalize(primeiroNome($(input).val()))} foi cancelado por ${motivosParaSerCancelado[motivoSorteado].toLowerCase()}.`.split('').forEach((letter, index) => {
+            `${capitalize(primeiroNome($(input).val()))} foi cancelado por ${isEmpty(urlMotivo) ? motivosParaSerCancelado[motivoSorteado].toLowerCase() : motivoSorteado }.`.split('').forEach((letter, index) => {
               setTimeout(() => {
                 index === 0 ? message.textContent = letter : message.textContent += letter;
               }, index * 40);
@@ -180,7 +182,7 @@ import { capitalize, criarTooltips, isEmpty, popovers, primeiroNome, tooltips } 
             setTimeout(() => {
               input.removeAttribute('disabled');
               work = false;
-            }, motivosParaSerCancelado.length * 40);
+            }, (isEmpty(urlMotivo) ? motivosParaSerCancelado.length : motivoSorteado.length) * 40);
           }, 500);
         }
       }else{

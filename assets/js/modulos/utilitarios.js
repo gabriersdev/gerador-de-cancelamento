@@ -36,7 +36,7 @@ const controleFechamentoModal = () => {
   })
 }
 
-function sanitizarString(string){
+function sanitizarString(string ){
   if(typeof string == 'string'){
     const substituir = [
       {
@@ -230,7 +230,7 @@ function zeroEsquerda(quantidadeZeros, valor){
 
 function desanitizarStringURL(string){
   if(!isEmpty(string)){
-    return decodeURIComponent(string).replaceAll('-', ' ');
+    return decodeURIComponent(string).replaceAll('-', ' ').trim();
   }else{
     return '';
   }
