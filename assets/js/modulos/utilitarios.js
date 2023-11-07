@@ -4,8 +4,10 @@ const isEmpty = (valor) => {
       return valor == undefined || valor == null || valor.trim().length <= 0;
     }else if(Array.isArray(valor)){
       return valor.length <= 0;
-    }else if(typeof valor == 'object'){
+    }else if(typeof valor == 'object' && valor !== null && valor !== undefined){
       return Object.keys(valor).length <= 0;
+    }else if(valor == undefined || valor == null){
+      return true;
     }else{
       return valor == undefined || valor == null
     }
@@ -229,7 +231,7 @@ function zeroEsquerda(quantidadeZeros, valor){
 }
 
 function desanitizarStringURL(string){
-  if(!isEmpty(string)){
+  if(!isEmpty(string) && string !== null && string !== undefined){
     return decodeURIComponent(string).replaceAll('-', ' ').trim();
   }else{
     return '';
