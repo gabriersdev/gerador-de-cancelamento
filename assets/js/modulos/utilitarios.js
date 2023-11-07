@@ -10,7 +10,7 @@ const isEmpty = (valor) => {
       return valor == undefined || valor == null
     }
   }catch(error){
-    throw new error('Ocorreu um erro ao verificar se o %s é vazio. Error: %s', typeof valor, error);
+    throw new Error('Ocorreu um erro ao verificar se o %s é vazio. Error: %s', typeof valor, error);
     return true;
   }
 }
