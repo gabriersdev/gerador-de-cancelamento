@@ -17,6 +17,7 @@
 
 html{
   scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
 }
 
 *{
@@ -60,6 +61,7 @@ body{
   background: linear-gradient(to bottom, var(--background), #001816), #000;
 
   .main{
+    scroll-snap-type: top;
     min-height: 100vh;
     display: flex;
     place-items: center;

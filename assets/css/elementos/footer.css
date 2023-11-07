@@ -1,4 +1,5 @@
 .footer{
+  scroll-snap-align: center;
   border-top-width: 1px;
   border-top-style: solid;
   border-image: linear-gradient(90deg, var(--branco-50) 0%, var(--branco-10) 100%) 1;
