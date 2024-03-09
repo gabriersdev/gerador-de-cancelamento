@@ -161,6 +161,7 @@ import { capitalize, criarTooltips, desanitizarStringURL, isEmpty, popovers, pri
           
           work = true; // Marcando tarefa como em execução
           input.setAttribute('disabled', 'on');
+          event.target.querySelector('button').classList.add('disabled');
           
           setTimeout(() => message.textContent = '_', 100);
           setTimeout(() => message.innerHTML = '&nbsp;', 300);
@@ -181,6 +182,7 @@ import { capitalize, criarTooltips, desanitizarStringURL, isEmpty, popovers, pri
             
             setTimeout(() => {
               input.removeAttribute('disabled');
+              event.target.querySelector('button').classList.remove('disabled');
               work = false;
             }, (isEmpty(urlMotivo) ? motivosParaSerCancelado.length : motivoSorteado.length) * 40);
           }, 500);

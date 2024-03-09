@@ -185,6 +185,12 @@ body{
   }
 }
 
+.disabled{
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 @media screen and (width >= 766px) {
   .message-return{
     &::before{
