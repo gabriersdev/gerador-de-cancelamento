@@ -17,31 +17,31 @@ import { capitalize, criarTooltips, desanitizarStringURL, isEmpty, popovers, pri
     linkElementos.forEach(link => {
       switch(link.dataset.link.toLowerCase().trim()){      
         case 'confirmacao-cca':
-        link.href = 'https://gabrieszin.github.io/confirmacao-cca/';
+        link.href = 'https://gabriersdev.github.io/confirmacao-cca/';
         break;
 
         case 'password-generator':
-        link.href = 'https://gabrieszin.github.io/random-password/';
+        link.href = 'https://gabriersdev.github.io/random-password/';
         break;
 
         case 'nlw-exporer':
-        link.href = 'https://github.com/gabrieszin/nlw-esports-gabrieszin';
+        link.href = 'https://github.com/gabriersdev/nlw-esports-gabriersdev';
         break;
 
         case 'qr-code-generator':
-        link.href = 'https://gabrieszin.github.io/qr-code-generator/';
+        link.href = 'https://gabriersdev.github.io/qr-code-generator/';
         break;
         
         case 'github-dev':
-        link.href = 'https://github.com/gabrieszin';
+        link.href = 'https://github.com/gabriersdev';
         break;
         
         case 'github-projeto':
-        link.href = 'https://github.com/gabrieszin/gerador-de-cancelamento';
+        link.href = 'https://github.com/gabriersdev/gerador-de-cancelamento';
         break;
         
         case 'portfolio':
-        link.href = 'https://gabrieszin.github.io/portfolio/';
+        link.href = 'https://gabriersdev.github.io/portfolio/';
         break;  
         
         case 'linkedin':
